@@ -24,9 +24,24 @@ def get_emails_by_domain(domain):
         print(f"Error: {response.status_code}")
         return []
 
-# Example: search for emails from a pharmacy domain
-domain = 'walgreens.com'
-emails = get_emails_by_domain(domain)
+# List of pharmacy-related domains (add more as needed)
+pharmacy_domains = [
+    'walgreens.com',
+    'riteaid.com',
+    'cvs.com',
+    'boots.com',
+    'pharmacy.com',
+    'goodrx.com',
+    'healthmart.com',
+    'pharmaprix.ca'
+]
+
+# Collect emails for each pharmacy domain
+emails = []
+for domain in pharmacy_domains:
+    print(f"Fetching emails for {domain}...")
+    domain_emails = get_emails_by_domain(domain)
+    emails.extend(domain_emails)
 
 # Save the emails to a CSV file
 if emails:
@@ -35,4 +50,6 @@ if emails:
         writer.writerow(['Email'])
         for email in emails:
             writer.writerow([email['value']])
-    print(f"Emails from {domain} saved to 'pharmacy_emails.csv'")
+    print(f"Emails from pharmacies saved to 'pharmacy_emails.csv'")
+else:
+    print("No pharmacy emails were found.")
