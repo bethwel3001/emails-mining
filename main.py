@@ -1,8 +1,17 @@
 import requests
 import csv
+import os
+from dotenv import load_dotenv
 
-# Your Hunter.io API key
-API_KEY = '18236675eb2fef16b4bef72e313da963c00623af'
+# Load environment variables from .env file
+load_dotenv()
+
+# Retrieve the API key
+API_KEY = os.getenv('HUNTER_API_KEY')
+
+if not API_KEY:
+    raise ValueError("API Key not found! Please set it in the .env file.")
+
 BASE_URL = 'https://api.hunter.io/v2/domain-search'
 
 # Function to search emails by domain
