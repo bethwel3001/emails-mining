@@ -1,4 +1,4 @@
-# Pharmacy Email Scraper using Hunter.io API
+# Emails Scraper using Hunter.io API
 
 ********************************
 
@@ -7,7 +7,7 @@ This project is a Python script that scrapes publicly available email addresses 
 ## Features
 - Scrapes email addresses from a predefined list of pharmacy-related domains.
 - Uses the **Hunter.io API** to retrieve emails.
-- Saves the extracted emails to a CSV file for easy access.
+- Saves the extracted emails to a *CSV file* for easy access.
 - Can be easily extended with additional pharmacy domains.
 
 ## Prerequisites
@@ -22,18 +22,21 @@ This project is a Python script that scrapes publicly available email addresses 
    cd emails-mining
    ```
 2. **Install dependencies**
-  ```
+  ```bash
   pip install requests
 
   ```
 ## Setting up
 1. Sign up to Hunter.io
-- Go to Hunter.io and create a free account
-- Retrieve your API key from the dashboard
+- Go to **Hunter.Io** and create a free account
+- Retrieve your **API-key** from the dashboard
 
 ## Ethical considerations
-*Please use the scraped data responsibly and ensure that you're in compliance with data privacy regulations such as GDPR, CAN-SPAM Act, or other relevant laws. This tool is intended for research and data science purposes.*
+*Please use the scraped data responsibly and ensure that you're in compliance with data privacy regulations such as GDPR, CAN-SPAM Act, or other relevant laws. This tool is intended for research and data science/machine learning purposes.*
 
 ## License
-- This project is licensed under the MIT License - see the LICENSE file for details.
+- This project is licensed under the **MIT License** - see the *LICENSE* file for details.
 
+**Dev Bethwel Kiplagat**
+**github.com/bethwel3001**
+**kiplagatbethwelk@gmail.com**

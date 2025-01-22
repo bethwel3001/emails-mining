@@ -39,7 +39,7 @@ pharmacy_domains = [
 # Collect emails for each pharmacy domain
 emails = []
 for domain in pharmacy_domains:
-    print(f"Fetching emails for {domain}...")
+    print(f"Fetching emails from {domain}...")
     domain_emails = get_emails_by_domain(domain)
     emails.extend(domain_emails)
 
@@ -50,6 +50,6 @@ if emails:
         writer.writerow(['Email'])
         for email in emails:
             writer.writerow([email['value']])
-    print(f"Emails from pharmacies saved to 'pharmacy_emails.csv'")
+    print(f"Done! -Emails from pharmacies saved to 'pharmacy_emails.csv'")
 else:
     print("No pharmacy emails were found.")
